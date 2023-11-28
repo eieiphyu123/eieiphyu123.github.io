@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .home{
+            max-width: 200px;
+            background-color: green;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="click">I want to go home.</p>
+    <button id="addClass">Add Class</button>
+    <button id="remove">Remove Class</button>
+
+    <h2>EI EI</h2>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#addClass').click(function(){
+                $('#click').addClass('home');
+            })
+
+            $('#remove').click(function(){
+                $('#click').removeClass('home');
+                $('#click').text('I want to go home');
+                $('h2').text('EI EI');
+            })
+
+            $('#click').click(function(){
+                $(this).toggleClass('home');
+                $('h2').text('hi phyu');
+                $(this).text('welcome home');
+            })
+
+            
+
+
+        })
+    </script>
+</body>
+</html>

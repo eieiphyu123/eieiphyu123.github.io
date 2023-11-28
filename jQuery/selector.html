@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="p-tag">Jquery is Easy.</p>
+    <p class="p-tag">Jquery is Funny.</p>
+    <h1>Jquery Selector</h1>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <script src="jquery.min.js"></script>
+    <script>
+        // selector - element, class, id, attribute, *
+        // $('selector').action(callback)
+        // action လုပ်လိုက်တာနဲ့ ဖြစ်ချင်တာကို call function ထဲမှာရေး
+        $(document).ready(function(){
+
+            $('#hide').click(function(){
+                $('h1').hide('slow');
+                $('.p-tag').hide('fast');
+                // $('h1').hide(function(){
+                //     alert('Hide');
+                // });
+            })
+
+            $('#show').click(function(){
+                $('h1').show(5000);
+                $('.p-tag').show('slow');
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .welcome{
+            max-width: 250px;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="dbClick">Double Click</button>
+    <p id="eiei">Welcome to Ei Ei</p>
+    <input type="text" id="name">
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#dbClick').dblclick(function(){
+                alert("Hello Double Clik");
+            })
+
+            $('#eiei').mouseover(function(){
+                $('#eiei').addClass('welcome');
+            })
+            $('#eiei').mouseout(function(){
+                $('#eiei').removeClass('welcome');
+            })
+            $('#name').focus(function(){
+                $(this).css('background-color','red');
+            })
+
+        })
+    </script>
+</body>
+</html>
