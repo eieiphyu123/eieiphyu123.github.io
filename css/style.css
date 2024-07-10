@@ -1,0 +1,75 @@
+/* font css */
+@font-face {
+  font-family: 'Raleway';
+  src: url('../font/Raleway-Regular.ttf');
+}
+body{
+  font-family: Raleway;
+    color: #36454F;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.headerShadow{
+  background-color: white;
+  box-shadow: 0 4px 10px -2px gray;
+  z-index: 1020;
+}
+/* animated link */
+.animated-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.animated-link:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-link:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(90deg, #007bff, #6c757d);
+}
+
+/* Humberger color change */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.75); /* Change border color to white */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Change icon color to white */
+  }
+
+/* Background Image */
+.bg-img{
+    background-image: url(../images/ep.jpg); 
+    background-repeat: no-repeat; 
+    height: 50vh;
+    width: auto;
+    background-position: center;  
+}
+
+.image-container {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.2);
+}
